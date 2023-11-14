@@ -12,7 +12,11 @@ function App() {
     //         robots: [],
     //         searchfield: ""
     //     }
+<<<<<<< HEAD
     // } 
+=======
+    // }
+>>>>>>> ec2c5b7abdca97bf7bd1befab0163e821131b6ca
     const [robots, setRobots] = useState([])
     const [searchfield, setSearchfield] = useState('')
     
@@ -27,11 +31,19 @@ function App() {
             .then(users => {setRobots(users)});
     })
 
+<<<<<<< HEAD
      onSearchChange = (event) => {
         setSearchfield(event.target.value);
     }
 
      filteredRobots = robots.filter(robot => {
+=======
+    const onSearchChange = (event) => {
+        setSearchfield(event.target.value);
+    }
+
+    const filteredRobots = robots.filter(robot => {
+>>>>>>> ec2c5b7abdca97bf7bd1befab0163e821131b6ca
         return robot.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !robots.length ? 
